@@ -110,6 +110,8 @@ on Artificial Intelligence and Statistics}}
 	Computational Learning Theory}}
 @string{colt23 = {Proceedings of the Thirty Sixth Annual Conference on
 	Computational Learning Theory}}
+@string{colt24 = {Proceedings of the Thirty Seventh Annual Conference on
+	Computational Learning Theory}}
 
 @string{ecp = {Electronic Communications in Probability}}
 @string{emnlp = {Proceedings of Empirical Methods for Natural Language
@@ -318,7 +320,13 @@ Management of Data (SIGMOD)}}
 		  Artificial Intelligence}}
 @string{aaai18= {Proceedings of the Thirty-Fourth AAAI Conference on
 		  Artificial Intelligence}}
-@string{aaai19= {Proceedings of the Thirty-Third AAAI Conference on
+@string{aaai19= {Proceedings of the Thirty-Fifth AAAI Conference on
+		  Artificial Intelligence}}
+@string{aaai20= {Proceedings of the Thirty-Sixth AAAI Conference on
+		  Artificial Intelligence}}
+@string{aaai21= {Proceedings of the Thirty-Seventh AAAI Conference on
+		  Artificial Intelligence}}
+@string{aaai22= {Proceedings of the Thirty-Eighth AAAI Conference on
 		  Artificial Intelligence}}
 
 @string{anprob=	{Annals of Probability}}
@@ -8798,6 +8806,14 @@ booktitle = icml22,
 title = {Accelerated, Optimal, and Parallel: Some Results on Model-Based Stochastic Optimization},
 }
 
+@article{ChadhaDuKu24,
+author = {Karan Chadha and John Duchi and Rohith Kuditipudi},
+title = {Resampling methods for private statistical inference},
+year = 2024,
+journal = {arXiv:2402.07131 [stat.ML]},
+}
+
+
 @article{ChaiMoPa11,
   author={Anwei Chai and Miguel Moscoso and George Papanicolaou},
   title={Array imaging using intensity-only measurements},
@@ -13608,6 +13624,13 @@ year = 2010,
 booktitle = colt10,
 }
 
+@inproceedings{DuchiHa24,
+author = {John Duchi and Saminul Haque},
+year = 2024,
+booktitle = colt24,
+title = {An information-theoretic lower bound in time-uniform estimation},
+}
+
 @inproceedings{DuchiHaKu23,
 author = {John Duchi and Saminul Haque and Rohith Kuditipudi},
 title = {A fast algorithm for adaptive private mean estimation},
@@ -18266,6 +18289,13 @@ comment = { Develops what they call ``omnipredictors,'' which is related
   booktitle={Proceedings of The 33rd International Conference on Machine Learning},
   pages={364--372},
   year=2016
+}
+
+@inproceedings{GopiLeWu21,
+title = {Sivakanth Gopi and Yin Tat Lee and Lukas Wutschitz},
+title = {Numerical composition of differential privacy},
+booktitle = nips2021,
+year = 2021,
 }
 
 @inproceedings{Gordon99,
@@ -25662,6 +25692,18 @@ booktitle = {Proceedings AAAI-06},
 organization = {American Association for Artificial Intelligence},
 }
 
+@inproceedings{LeeLiSeSh22,
+author = {Sokbae Lee and Yuan Liao and Myung Hwan Seo and Youngki Shin},
+title = {Fast and robust online inference with stochastic
+gradient descent via random scaling},
+booktitle = aaai22,
+year = 2022,
+comment = {These show an interesting result that the iterates of stochastic
+gradient descent converge as a process to a Brownian motion when normalized
+by a certain running covariance. Super cool. Extended by a submission
+to COLT whose name I forget.},
+}
+
 @article{LeeMa88,
 author=	  	{Kai-Fu Lee and Sanjoy Mahajan},
 title=    	{A Pattern Classification Approach to Evaluation Function
@@ -29152,6 +29194,17 @@ comment=	{address= Boston/Dordrecht/Lancaster}
   publisher={Nature Publishing Group}
 }
 
+@article{ModhaMa96,
+title = {Minimum complexity regression estimation with weakly dependent
+observations},
+author = {Dharmendra S. Modha and Elias Masry},
+year = 1996,
+journal = ieeeit,
+volume = 42,
+number = 6,
+pages = {2133--2145},
+}
+
 @inproceedings{MohanThShSoCu12,
 author = {Prashanth Mohan and Abhradeep Thakurta and Elaine Shi
   and Dawn Song and David E. Culler},
@@ -29163,6 +29216,16 @@ comment = {Basically uses subsample and aggregate to build a
   privacy preserving system. Suggests using old data
   to choose subsample sizes over which to aggregate.
 },
+}
+
+@article{MohriRo10,
+author = {Mehryar Mohri and Afshin Rostamizadeh},
+title = {Stability bounds for stationary $\phi$-mixing and
+  $\beta$-mixing processes},
+year = 2010,
+journal = jmlr,
+volume = 11,
+pages = {789--814},
 }
 
 @inproceedings{MohriSiSu19,
@@ -32228,6 +32291,13 @@ year = 1992,
 publisher = {Cambridge University Press},
 }
 
+@book{Pressly24,
+author = {Lowry Pressly},
+title = {The Right to Oblivion: Privacy and the Good Life},
+publisher = {Harvard University Press},
+year = 2024,
+}
+
 @phdthesis{Price13,
 author = {Eric Price},
 title = {Sparse Recovery and Fourier Sampling},
@@ -33022,7 +33092,7 @@ booktitle = nips2011,
 author = {Rachel Redberg and Antti Koskela and Yu-Xiang Wang},
 title = {Improving the Privacy and Practicality of Objective Perturbation for Differentially Private Linear Learners},
 year = 2023,
-booktitle = nips23,
+booktitle = nips2023,
 comment = {Provides the nice clean proof that objective perturbation is
   actually private.}
 }
@@ -37251,6 +37321,14 @@ publisher = {Springer Publishing Company, Incorporated},
 edition = {1st},
 }
 
+@inproceedings{SteinwartCh09,
+author = {Steinwart, Ingo and Christmann, Andreas},
+title = {Fast learning from non-i.i.d.\ observations},
+year = 2009,
+booktitle = nips2009,
+pages = {1768--1776},
+}
+
 @article{SteinwartCh11,
 author = "Steinwart, Ingo and Christmann, Andreas",
 fjournal = "Bernoulli",
@@ -39058,6 +39136,15 @@ comment={isbn = {0-521-49603-9}},
   pages={631--682},
   year=2002,
   publisher={Institute of Mathematical Statistics}
+}
+
+@incollection{VanDerVaart02semiparametric,
+title = {Semiparametric statistics},
+author = {Aad W. van der Vaart},
+year = 2002,
+booktitle = {Lectures on Probability Theory and Statistics (Saint-Flour)},
+pages = {331--457},
+publisher = {Springer},
 }
 
 @article{VanErvenGrMeReWi15,
