@@ -282,8 +282,14 @@
 \newenvironment{proofof}[1]{\noindent{\bf Proof} of {#1}:
   \hspace*{1em}}{\qed\bigskip\\}
 
-\newenvironment{remark}{\noindent{\bf Remark}
-  \hspace*{1em}}{\bigskip}
+\newcounter{remark}
+
+\newenvironment{remark}{%
+  \refstepcounter{remark}
+  \noindent \textbf{Remark \theremark:}\hspace*{.05em}
+}{%
+  $\blacktriangle$ \medskip
+}
 
 \newcounter{example}
 
