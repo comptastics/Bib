@@ -2864,6 +2864,13 @@ journal = {arXiv:2005.10630 [cs.CR]},
   year= 2021,
 }
 
+@article{AsiDuTa25,
+author = {Hilal Asi and John Duchi and Kunal Talwar},
+title = {On Privately Estimating a Single Parameter},
+year = 2025,
+journal = {arXiv:2503.17252v1 [cs.LG]},
+}
+
 @inproceedings{AsiFeKoTa21,
 author = {Hilal Asi and Vitaly Feldman and Tomer Koren and Kunal Talwar},
 title = {Private Stochastic Convex Optimization: Optimal Rates in {$\ell_1$} Geometry},
@@ -3513,6 +3520,14 @@ author = {Borja Balle and James Bell and Adria Gascon and Kobbi Nissim},
 title = {The Privacy Blanket of the Shuffle Model},
 year = 2019,
 booktitle = {39th Annual International Cryptology Conference (CRYPTO)},
+}
+
+@article{BalleWa18,
+author = {Borja Balle and Yu-Xiang Wang},
+title = {Improving the {G}aussian mechanism for differential privacy:
+  analytical calibration and optimal denoising},
+year = 2018,
+journal = {arXiv:1805.06530},
 }
 
 @unpublished{Balsubramani14,
@@ -29015,6 +29030,41 @@ comment=	{The classic paper that says humans can hold 7 +/- 2 'chunks'
                 relative versus non-relative judgments.}
 }
 
+@article{MillerDu15,
+author = {Jeffrey W. Miller and David B. Dunson},
+title = {Robust {B}ayesian inference via coarsening},
+year = 2015,
+journal = {arXiv:1506.06101 [stat.ME]},
+comment = {
+  Develops a methodology around ``coarsening'' a Bayesian posterior, which
+  instead of using the observed data $x_1^n$
+  to compute the conditional distribution
+  $P(\theta \mid x_1^n)$, conditions instead on an event that the observed
+  data $x_1^n$ has an empirical distribution that is close in some
+  sense to the empirical distribution one would have observed from
+  $X_1^n \simiid P_\theta$, where $P_\theta$ is the Bayesian model.
+  %
+  Allowing $P_o$ to be the ``true'' observed data distribution, if an
+  estimated function $d_n(X_1^n, x_1^n)$ is available that satisfies
+  $d_n(X_1^n, x_1^n) \cas d(P_\theta, P_o)$, then the posteriors
+  $P(\theta \mid d_n(X_1^n, x_1^n) \le R) \to P(\theta \mid d(P_\theta, P_0)
+  \le R)$ where $R$ is some positive-valued random variable.
+  %
+  So there is some type of posterior convergence.
+  %
+  Experiments show heuristically that roughly this variable $R$ corresponds
+  to a sample size truncation, so that the data does \emph{not} swamp
+  the prior eventually.
+  %
+  Also they show some numerical approximations that allow this to be
+  efficiently approximated by a so-called ``power posterior,'' which
+  simply raises the density of observations to a power.
+  %
+  (The assumption that the true distance is estimable seems a bit hard,
+  and they do not address any rates of convergence there.)
+},
+}
+
 @inproceedings{MinhNiYa06,
   title={Mercer's theorem, feature maps, and smoothing},
   author={Minh, Ha Quang and Niyogi, Partha and Yao, Yuan},
@@ -34461,12 +34511,12 @@ comment = {Uses some simple information theoretic inequalities to bound
   publisher={INFORMS}
 }
 
-@misc{RyuBo14,
+@misc{RyuBo16,
 title = {Stochastic Proximal Iteration: A Non-Asymptotic Improvement Upon
   Stochastic Gradient Descent},
 author = {Ernest Ryu and Stephen Boyd},
 url = {http://www.math.ucla.edu/~eryu/papers/spi.pdf},
-year = 2014,
+year = 2016,
 }
 
 @book{RyuYi22, 
@@ -37157,6 +37207,13 @@ year = 2015,
 volume = 25,
 number = 1,
 pages = {713--739},
+}
+
+@inproceedings{SrebroSrTe11,
+title = {On the Universality of Online Mirror Descent},
+year = 2011,
+booktitle = nips11,
+author = {Nathan Srebro and Karthik Sridharan and Ambuj Tewari},
 }
 
 @inproceedings{SrebroSrTe10,
