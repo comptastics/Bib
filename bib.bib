@@ -4179,13 +4179,14 @@ booktitle = stoc16,
 pages = {1046--1059},
 }
 
-@article{BastaniGuJuNoRaRo22,
+@inproceedings{BastaniGuJuNoRaRo22,
 author = {Osbert Bastani and Varun Gupta and Christopher Jung and Georgy Noarov
   and Ramya Ramalingam and Aaron Roth},
 title = {Practical Adversarial Multivalid Conformal Prediction},
 year = 2022,
-journal = {arXiv:2206.01067 [cs.LG]},
-comment = {Uses a neat online procedure for grouping data (in $X$ space),
+booktitle = nips2022,
+comment = {arXiv:2206.01067 [cs.LG].
+  Uses a neat online procedure for grouping data (in $X$ space),
   then building calibrated predictors in each group. Requires a search
   over groups, and so it might be interesting to give more computationally
   efficient procedures where grouping is not so combinatorial. See
@@ -9815,6 +9816,14 @@ year = 2022,
 booktitle = colt22,
 }
 
+@inproceedings{CherianGiCa24,
+title = {Large language model validity via enhanced conformal
+prediction methods},
+author = {John Cherian and Isaac Gibbs and Emmanuel J. Cand\`{e}s},
+year = 2024,
+booktitle = nips2024,
+}
+
 @article{CheriditoDeKu04,
 author = {Patrick Cheridito and Freddy Delbaen and Michael Kupper},
 title = {Coherent and convex monetary risk measures for bounded c\`{a}dl\`{a}g processes},
@@ -10411,7 +10420,7 @@ address = {Boston},
 title = {Measure Theory},
 year = 2013,
 author = {Donald L. Cohn},
-publisher = {Springer},
+publisher = {Birkh\"{a}user},
 edition = {{S}econd},
 }
 
@@ -16517,12 +16526,16 @@ number = 12,
 year = 2021,
 }
 
-@article{FosterHa22,
+@article{FosterHa23,
 author = {Dean P. Foster and Sergiu Hart},
-title = {``Calibeating'': Beating Forecasters at their own Game},
-year = 2022,
-journal = {arXiv:2209.0489 [econ.TH]},
-comment = {\url{https://arxiv.org/abs/2209.04892}}
+title = {``{C}alibeating'': Beating Forecasters at their own Game},
+year = 2023,
+journal = {Theoretical Economics},
+volume = 18,
+number = 4,
+pages = {1441--1474},
+doi = {10.3982/TE5330},
+comment = {arXiv:2209.0489 [econ.TH]}, \url{https://arxiv.org/abs/2209.04892}}
 }
 
 @article{FosterKaQiRa21,
@@ -18669,13 +18682,15 @@ pages = {2672--2680},
 	}
 
 
-@article{GopalanKaReShWi21,
+@inproceedings{GopalanKaReShWi22,
 author = {Parikshit Gopalan and Adam Tauman Kalai and Omer Reingold
   and Vatsal Sharan and Udi Wieder},
 title = {Omnipredictors},
-year = 2021,
-journal = {arXiv:2109.05389 [cs.LG]},
-comment = { Develops what they call ``omnipredictors,'' which is related
+year = 2022,
+year = itcs2022,
+doi = {10.4230/LIPIcs.ITCS.2022.79},
+comment = {arXiv:2109.05389 [cs.LG]}.
+  Develops what they call ``omnipredictors,'' which is related
   to multicalibration (see \cite{HebertKiReRo18}). A function $f$ is an
   omni-predictor if for a collection of losses $\mc{L}$ and
   decision rules $c$, one has
@@ -18915,6 +18930,14 @@ year = 1990,
 publisher = {Springer},
 comment = {Basically deals with measure-theoretic versions of information
 theory, which is nice},
+}
+
+@book{Gray11,
+author = {Robert M. Gray},
+title = {Entropy and Information Theory},
+year = 2009,
+publisher = {Springer},
+edition = {Second},
 }
 
 @article{Gray06,
@@ -19402,6 +19425,13 @@ journal = {IEEE Transactions on Information Theory},
 volume = 46,
 number = 2,
 pages = {388--404},
+}
+
+@inproceedings{GuptaRa22,
+title = {Top-label calibration and multiclass-to-binary reductions},
+author = {Chirag Gupta and Aaditya Ramdas},
+year = 2022,
+booktitle = iclr22,
 }
 
 @article{GuptaRo21,
@@ -25801,6 +25831,14 @@ pages=		{45--52}
 ,pages = "331--339"
 }
 
+@book{Lang02,
+author = {Serge Lang},
+title = {Algebra},
+year = 2002,
+edition = {revised third},
+publisher = {Springer},
+}
+
 @inproceedings{LangfordCa01,
 author = {John Langford and Richard Caruana},
 title = {({N}ot) bounding the true error},
@@ -27443,6 +27481,14 @@ year=		1989
 ,year=		1994
 ,pages=		{212--261}
 }
+
+@book{Littlewood44,
+author = {John E. Littlewood},
+title = {Lectures on the Theory of Functions},
+year = 1944,
+publisher = {Oxford University Press},
+}
+
 
 @inproceedings{Liu07,
 	title={Fisher consistency of multicategory support vector machines},
