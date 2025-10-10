@@ -3219,6 +3219,43 @@ booktitle = nips2021,
 year={2021}
 }
 
+@inproceedings{AwasthiMaMoZh22,
+author = {Pranjal Awasthi and Anqi Mao and Mehryar Mohri and Yutao Zhong},
+title = {$\mathcal{H}$-consistency bounds for surrogate loss minimizers},
+year = 2022,
+booktitle = icml22,
+comment = {Builds off of \citet{LongSe13} to consider variants of surrogate
+  risk consistency for restricted hypothesis classes.
+  They define a ``minimizability gap'' $M_{\ell,\mc{H}} \defeq
+  \inf_{h \in \mc{H}} R_{\ell}(h) - \E[\inf_{h \in \mc{H}}
+  \E[\ell(h(X), Y) \mid X]]$, and then use this to give various surrogate
+  risk regrets.
+  %
+  So, for example, they show that if one has a conditional excess risk
+  bound with the function $\Psi$ then
+  $\Psi(R_{\ell_1}(h) - R_{\ell_1,\mc{H}}^* + M_{\ell_1,\mc{H}})
+  \le R_{\ell_2}(h) - R_{\ell_2,\mc{H}}^* + M_{\ell_2, \mc{H}}$.
+  %
+  These bounds are basically trivial applications of Jensen's inequality
+  once one includes the minimizability gap.
+  %
+  They also make some claims that smell fishy at best: in particular, writing
+  that one ``cannot hope to minimize or estimate'' the minimizability gap.
+  One of those statements is vacuous---it's just a quantity---and the
+  other is obviously false, because one can definitely estimate the
+  minimizability gap. They also make claims that the results are tight
+  (e.g. Theorem 4), but those are suspect at best as well:
+  what tightness \emph{should} mean is that, in their notation,
+  $R_{\ell_1}(h) - R_{\ell_1,\mc{H}}^* \asymp
+  R_{\ell_2}(h) - R_{\ell_2,\mc{H}}^* + M_{\ell_2,\mc{H}}$, that is,
+  the excess risk for loss 1 necessarily depends on that for loss 2 and
+  \emph{additionally} the minimizability gap for 2. Otherwise it's not
+  clear that one needs these terms.
+  %
+  Overall, lots of overblown claims.
+},
+}
+
 @inproceedings{AzarBrKaLiPh92,
 author=		{Yossi Azar and Andrei Z. Broder and Anna R. Karlin and
 			Nathan Linial and Steven Phillips},
@@ -27770,6 +27807,32 @@ year={1990},
 volume={36},
 number={2},
 pages={241--255},
+}
+
+@inproceedings{LongSe13,
+author = {Philip M. Long and Rocco A. Servedio},
+title = {Consistency versus Realizable ${H}$-Consistency
+for Multiclass Classification},
+year = 2013,
+booktitle = icml13,
+comment = {
+  Considers surrogate risk consistency for restricted classes of hypotheses
+  $\mc{H}$ (but does not provide a general theory).
+  Shows a funny counter-example that for realizable problems, meaning
+  that there exists $h \in \mc{H}$ with $\argmax_y h_y(x) = y(x)$, where
+  $P(Y = y(x) \mid x) = 1$, that the Crammer-Singer max margin loss
+  $\ell(h(x), y) = \max_{j \neq y} (1 + h_j(x) - h_y(x))_+$ attains
+  consistency, while a reasonable family of smooth losses that are Bayes
+  risk consistent fail to be consistent.
+  %
+  Specifically, the family of losses of the form
+  $\ell(h(x), y) = -h_y(x) + \sum_{j \neq y} \phi(-h_j(x))$, where $\phi$
+  is a convex function with $\phi'(0) < 0$ but which eventually
+  increases. (For example, $\phi(t) = (t - 1)^2$.) These are Bayes consistent
+  but not consistent for restricted hypothesis classes.
+  %
+  Realizability is key here, but a good thought experiment.
+},
 }
 
 @InProceedings{LongWu04,
