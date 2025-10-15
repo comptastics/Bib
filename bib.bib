@@ -278,6 +278,10 @@ Management of Data (SIGMOD)}}
 		  Symposium on the Theory of Computing}}
 @string{stoc23 = {Proceedings of the Fifty-Fifth Annual ACM
 		  Symposium on the Theory of Computing}}
+@string{stoc24 = {Proceedings of the Fifty-Sixth Annual ACM
+		  Symposium on the Theory of Computing}}
+@string{stoc25 = {Proceedings of the Fifty-Seventh Annual ACM
+		  Symposium on the Theory of Computing}}
 
 @string{pods02 = {Proceedings of the Twenty-First ACM SIGMOD-SIGACT-SIGART
   Symposium on Principles of Database Systems}}
@@ -435,6 +439,8 @@ Management of Data (SIGMOD)}}
 @string{nips2021= {Advances in Neural Information Processing Systems 34}} % 2021
 @string{nips2022= {Advances in Neural Information Processing Systems 35}} % 2022
 @string{nips2023= {Advances in Neural Information Processing Systems 36}} % 2023
+@string{nips2024= {Advances in Neural Information Processing Systems 37}} % 2024
+@string{nips2025= {Advances in Neural Information Processing Systems 38}} % 2025
 
 @string{sigir88={Proceedings of the 11th Annual International
 		  ACM SIGIR Conference on Research and Development in
@@ -850,6 +856,17 @@ number = 12,
 pages = {7835--7855},
 }
 
+@article{AcharyaCaTy20b,
+author = {Jayadev Acharya and Cl\'{e}ment Cannone and Himanshu Tyagi},
+title = {Inference under Information Constraints {II}:
+  Communication Constraints and Shared Randomness},
+year = 2020,
+journal = ieeeit,
+volume = 66,
+number = 12,
+pages = {7856--7877},
+}
+
 @article{AcharyaCaFrSuTy21,
 author = {Jayadev Acharya and Cl\'{e}ment Cannone and Cody Freitag
   and Ziteng Sun and Himanshu Tyagi},
@@ -1254,6 +1271,17 @@ title = {Stability and generalization of bipartite ranking algorithms},
 booktitle = colt05,
 pages = {32--47},
 year = {2005}
+}
+
+@article{Agarwal14,
+author = {Shivani Agarwal},
+title = {Surrogate regret bounds for bipartite ranking via strongly proper
+  losses},
+journal = jmlr,
+volume = 15,
+number = 49,
+year = 2014,
+pages = {1653--1674},
 }
 
 @article{AgarwalNi09,
@@ -2448,6 +2476,13 @@ note = {Available at
                   deterioration in the rate.}
 }
 
+@article{ArecesDu25,
+author = {Felipe Areces and John C. Duchi},
+title = {Distribution free {M}-estimation},
+year = 2025,
+journal = {arXiv:2505.22807 [math.ST]},
+}
+
 @inproceedings{ArecesChDuKu24,
 author = {Felipe Areces and Chen Cheng and John Duchi and Rohith Kuditipudi},
 title = {Two fundamental limits for uncertainty quantification in predictive
@@ -3195,6 +3230,43 @@ booktitle = nips2021,
 year={2021}
 }
 
+@inproceedings{AwasthiMaMoZh22,
+author = {Pranjal Awasthi and Anqi Mao and Mehryar Mohri and Yutao Zhong},
+title = {$\mathcal{H}$-consistency bounds for surrogate loss minimizers},
+year = 2022,
+booktitle = icml22,
+comment = {Builds off of \citet{LongSe13} to consider variants of surrogate
+  risk consistency for restricted hypothesis classes.
+  They define a ``minimizability gap'' $M_{\ell,\mc{H}} \defeq
+  \inf_{h \in \mc{H}} R_{\ell}(h) - \E[\inf_{h \in \mc{H}}
+  \E[\ell(h(X), Y) \mid X]]$, and then use this to give various surrogate
+  risk regrets.
+  %
+  So, for example, they show that if one has a conditional excess risk
+  bound with the function $\Psi$ then
+  $\Psi(R_{\ell_1}(h) - R_{\ell_1,\mc{H}}^* + M_{\ell_1,\mc{H}})
+  \le R_{\ell_2}(h) - R_{\ell_2,\mc{H}}^* + M_{\ell_2, \mc{H}}$.
+  %
+  These bounds are basically trivial applications of Jensen's inequality
+  once one includes the minimizability gap.
+  %
+  They also make some claims that smell fishy at best: in particular, writing
+  that one ``cannot hope to minimize or estimate'' the minimizability gap.
+  One of those statements is vacuous---it's just a quantity---and the
+  other is obviously false, because one can definitely estimate the
+  minimizability gap. They also make claims that the results are tight
+  (e.g. Theorem 4), but those are suspect at best as well:
+  what tightness \emph{should} mean is that, in their notation,
+  $R_{\ell_1}(h) - R_{\ell_1,\mc{H}}^* \asymp
+  R_{\ell_2}(h) - R_{\ell_2,\mc{H}}^* + M_{\ell_2,\mc{H}}$, that is,
+  the excess risk for loss 1 necessarily depends on that for loss 2 and
+  \emph{additionally} the minimizability gap for 2. Otherwise it's not
+  clear that one needs these terms.
+  %
+  Overall, lots of overblown claims.
+},
+}
+
 @inproceedings{AzarBrKaLiPh92,
 author=		{Yossi Azar and Andrei Z. Broder and Anna R. Karlin and
 			Nathan Linial and Steven Phillips},
@@ -3412,6 +3484,24 @@ year=		1977
   pages={2647--2678},
   year={2017},
   publisher={The Institute of Mathematical Statistics and the Bernoulli Society}
+}
+
+@article{BalakrishnanWa19,
+title = {Hypothesis Testing For Densities and High-Dimensional Multinomials: Sharp Local Minimax Rates},
+author = {Sivaraman Balakrishnan and Larry Wasserman},
+year = 2019,
+journal = aos,
+volume = 47,
+number = 4,
+pages = {1893--1927},
+}
+
+@unpublished{Balakrishnan20,
+title = {Advanced Statistical Theory {I}},
+author = {Sivaraman Balakrishnan},
+year = 2020,
+url = {https://www.stat.cmu.edu/~siva/teaching/709/},
+note = {Lecture notes for Carnegie Mellon Course 36-709},
 }
 
 @article{BalakrishnanWaYu17,
@@ -4146,13 +4236,14 @@ booktitle = stoc16,
 pages = {1046--1059},
 }
 
-@article{BastaniGuJuNoRaRo22,
+@inproceedings{BastaniGuJuNoRaRo22,
 author = {Osbert Bastani and Varun Gupta and Christopher Jung and Georgy Noarov
   and Ramya Ramalingam and Aaron Roth},
 title = {Practical Adversarial Multivalid Conformal Prediction},
 year = 2022,
-journal = {arXiv:2206.01067 [cs.LG]},
-comment = {Uses a neat online procedure for grouping data (in $X$ space),
+booktitle = nips2022,
+comment = {arXiv:2206.01067 [cs.LG].
+  Uses a neat online procedure for grouping data (in $X$ space),
   then building calibrated predictors in each group. Requires a search
   over groups, and so it might be interesting to give more computationally
   efficient procedures where grouping is not so combinatorial. See
@@ -4191,6 +4282,14 @@ author = {Stephen Bates and Michael I. Jordan and Michael Sklar and
 title = {Principal-Agent Hypothesis Testing},
 year = 2022,
 journal = {arXiv:2205.06812 [cs.GT]},
+}
+
+@inproceedings{BatuFoRuSmWh00,
+author = {Tugkan Batu and Lance Fortnow and Ronitt Rubinfeld and Warren D. Smith
+  and Patrick White},
+title = {Testing that distributions are close},
+booktitle = focs00,
+year = 2000,
 }
 
 @article{BauschkeBo93,
@@ -4982,10 +5081,10 @@ pages=		{301--309}
                   which typical iid arguments can be applied.}
 }
 
-@article{BerendKo18,
+@article{BerendKo13,
 author = {Daniel Berend and Aryeh Kontorovich},
 title = {On the concentration of the missing mass},
-year = 2018,
+year = 2013,
 journal = ecp,
 volume = 18,
 pages = {1--7},
@@ -5764,6 +5863,16 @@ publisher = {University of California Press},
   year = 	 1954
 }
 
+@article{Blahut74,
+author = {Richard Blahut},
+title = {Hypothesis Testing and Information Theory},
+year = 1974,
+journal = ieeeit,
+volume = 20,
+number = 4,
+pages = {405--417},
+}
+
 @inproceedings{BlanchardKr2010,
   author = {Gilles Blanchard and Nicole Kr\"amer},
   title = {Optimal learning rates for Kernel Conjugate Gradient regression},
@@ -5956,6 +6065,16 @@ pages = {993--1022},
   title = {Demographic Dialectal Variation in Social Media: A Case Study of
     {A}frican-{A}merican {E}nglish},
   year = {2016},
+}
+
+@article{BlondelMaNi20,
+author = {Vincent Blondel and Andr\'{e} Martins and Vlad Niculae},
+title = {Learning with {F}enchel-Young Losses},
+year = 2020,
+journal = jmlr,
+volume = 21,
+number = 35,
+pages = {1--69},
 }
 
 @incollection{BloomRi12,
@@ -6230,6 +6349,15 @@ booktitle=	stoc90,
 year=		1990,
 month=		May,
 pages=		{54--63}
+}
+
+@article{BobkovGo99,
+title = {Exponential integrability and transportation cost related to logarithmic {S}obolev inequalities},
+author = {Sergey Bobkov and Friedrich G\"{o}tze},
+journal = {Journal of Functional Analysis},
+year = 1999,
+volume = 163,
+pages = {1--28},
 }
 
 @inproceedings{BottouBo07,
@@ -6893,6 +7021,24 @@ comment = {
   arXiv:1407.5144 [math.OC]},
 }
 
+@inproceedings{Braverman12,
+author = {Mark Braverman},
+title = {Interactive information complexity},
+year = 2012,
+booktitle = stoc12,
+pages = {505--524},
+}
+
+@article{BravermanRa14,
+author = {Mark Braverman and Anup Rao},
+year = 2014,
+title = {Information equals amortized communication},
+journal = ieeeit,
+volume = 60,
+number = 10,
+pages = {6058--6069},
+}
+
 @inproceedings{BravermanGaMaNgWo16,
 author = {Mark Braverman and Ankit Garg and Tengyu Ma and Huy L. Nguyen
   and David P. Woodruff},
@@ -7498,7 +7644,6 @@ volume = 188,
 	year={2019},
 }
 
-
 @inproceedings{BunSt16,
 author = {Mark Bun and Thomas Steinke},
 year = 2016,
@@ -7546,6 +7691,17 @@ pages = {635--658},
 		 decision-tree induction}
 ,journal=	ml
 ,year=		1992
+}
+
+@article{BunUlVa18,
+author = {Mark Bun and Jonathan Ullman and Salil Vadhan},
+year = 2018,
+journal = sicomp,
+title = {Fingerprinting codes and the
+price of approximate differential privacy},
+volume = 47,
+number = 5,
+pages = {1888--1938},
 }
 
 @inproceedings{BuolamwiniGe18,
@@ -7827,6 +7983,17 @@ author = {T. Tony Cai and Yichen Wang and Linjun Zhang},
 title = {Score Attack: A Lower Bound Technique for Optimal Differentially Private Learning},
 year = 2023,
 journal = {arXiv:2303.07152 [math.ST]}
+}
+
+@article{CaiWu14,
+title = {Optimal Detection of Sparse Mixtures Against a
+Given Null Distribution},
+author = {Tony T. Cai and Yihong Wu},
+journal = ieeeit,
+volume = 60,
+year = 2014,
+number = 4,
+pages = {2217--2232},
 }
 
 @article{CaiWu20,
@@ -8898,6 +9065,16 @@ journal = {arXiv:2402.07131 [stat.ML]},
   year={2011},
 }
 
+@article{Chaitin75,
+author = {Gregory J. Chaitin},
+title = {A Theory of Program Size Formally Identical to Information Theory},
+year = 1975,
+journal = jacm,
+volume = 22,
+number = 3,
+pages = {329--340},
+}
+
 @inproceedings{ChagantyLi14,
 author = {Arun Chaganty and Percy Liang},
 title = {Estimating latent-variable graphical models using moments
@@ -9450,6 +9627,13 @@ booktitle = colt22,
 comment = {journal = {arXiv:2202.09889 [stat.ML]}},
 }
 
+@article{ChengDu25,
+author = {Chen Cheng and John Duchi},
+title = {Some Robustness Properties of Label Cleaning},
+year = 2025,
+journal = {arXiv:2509.11379 [stat.ML]},
+}
+
 @article{ChengSaBa06,
 title = {Large-scale prediction of disulphide bridges using kernel methods,
 two-dimensional recursive neural networks, and weighted graph matching},
@@ -9496,7 +9680,9 @@ title = {The masked sample covariance estimator: an analysis using matrix
 concentration inequalities},
 year = 2012,
 journal = {Information and Inference},
-volume = {to appear},
+volume = {1},
+number = 1,
+pages = {2--20},
 }
 
 @article{ChenGl96,
@@ -9692,6 +9878,14 @@ author = {Yeshwanth Cherapanamjeri and Nilesh Tripuraneni and
 title = {Optimal Mean Estimation without a Variance},
 year = 2022,
 booktitle = colt22,
+}
+
+@inproceedings{CherianGiCa24,
+title = {Large language model validity via enhanced conformal
+prediction methods},
+author = {John Cherian and Isaac Gibbs and Emmanuel J. Cand\`{e}s},
+year = 2024,
+booktitle = nips2024,
 }
 
 @article{CheriditoDeKu04,
@@ -10290,7 +10484,7 @@ address = {Boston},
 title = {Measure Theory},
 year = 2013,
 author = {Donald L. Cohn},
-publisher = {Springer},
+publisher = {Birkh\"{a}user},
 edition = {{S}econd},
 }
 
@@ -10303,6 +10497,15 @@ edition = {{S}econd},
 	pages = "201--221",
 	year = 1994
 }
+
+@inproceedings{CojaGeHaWeZa22,
+title = {Statistical and computational phase transitions in group testing},
+year = 2022,
+booktitle = colt22,
+author = {Amin Coja-Oghlan and Oliver Gebhard and Max Hahn-Klimroth
+  and Alexander S Wein and Ilias Zadik},
+}
+
 
 @article{CoifmanWi92,
 	author = "R. Coifman and M. Wickerhauser",
@@ -11615,6 +11818,16 @@ pages = {1--31},
 ,pages=         {278-292}
 }
 
+@article{Dawid85,
+author = {A. Philip Dawid},
+title = {Calibration-Based Empirical Probability},
+year = 1985,
+journal = aos,
+volume = 13,
+number = 4,
+pages = {1251--1273},
+}
+
 @article{Dawid92a,
 author = {A. P. Dawid},
 title = {Applications of a general propagation algorithm for probabilistic expert systems},
@@ -12277,6 +12490,26 @@ number = 6,
 pages = {1501--1518},
 }
 
+@article{Dembo97,
+title = {Information inequalities and concentration of measure},
+author = {Amir Dembo},
+year = 1997,
+journal = aop,
+volume = 25,
+number = 2,
+pages = {927--939},
+}
+
+@article{DemboZe96,
+title = {Transportation approach to some concentration inequalities in product
+ spaces},
+author = {Amir Dembo and Ofer Zeitouni},
+year = 1996,
+journal = {Electronic Communications in Probability},
+volume = 1,
+pages = {83--90},
+}
+
 @book{DemboZe98,
 author = {Amir Dembo and Ofer Zeitouni},
 title = {Large Deviations Techniques and Applications},
@@ -12762,6 +12995,18 @@ number = 4,
 pages = {329--383},
 }
 
+@article{Dobrushin58,
+author = {Roland L. Dobrushin},
+title = {A statistical problem arising in the theory of detection
+of signals in the presence of noise in a multi-channel system and
+leading to stable distribution laws},
+journal = {Theory of Probability and Its Applications},
+year = 1958,
+volume = 3,
+number = 2,
+pages = {161--173},
+}
+
 @book{Dobson90,
 author=		{A.J.~Dobson},
 title=		{An Introduction to Generalized Linear Models},
@@ -13023,6 +13268,18 @@ number = 3,
   pages = {1200--1224},
 }
 
+@article{DonohoJaMo13,
+author = {David L. Donoho and Adel Javanmard and Andrea Montanari},
+title = {Information-Theoretically Optimal Compressed
+Sensing via Spatial Coupling and Approximate
+Message Passing},
+year = 2013,
+journal = ieeeit,
+volume = 59,
+number = 11,
+pages = {7434--7464},
+}
+
 @article{DonohoNu90,
 author = {David L. Donoho and Michael Nussbaum},
 title = {Minimax quadratic estimation of a quadratic functional},
@@ -13052,6 +13309,16 @@ volume = 26,
 number = 4,
 }
 
+@article{DonohoMaMo09,
+author = {David L. Donoho and Arian Maleki and Andrea Montanari},
+title = {Message Passing Algorithms for Compressed Sensing},
+year = 2009,
+journal = pnas,
+volume = 106,
+number = 45,
+pages = {18914--18919},
+}
+
 @article{DonohoMo16,
 author = {David Donoho and Andrea Montanari},
 title = {High dimensional robust {M}-estimation: asymptotic variance
@@ -13070,6 +13337,16 @@ title = {Implicit Functions and Solution Mappings: A View from Variational
 year = 2014,
 edition = {Second},
 publisher = {Springer},
+}
+
+@inproceedings{DornerHa24,
+title = {Don’t Label Twice: Quantity Beats Quality when Comparing Binary Classifiers on a Budget},
+year = 2024,
+author = {Florian E. Dorner and Moritz Hardt},
+booktitle = icml24,
+pages = {11544--11572},
+comment = {It would be interesting to investigate the questions in this
+  paper in a local asymptotic normality setting.},
 }
 
 @article{Dorofeyev85,
@@ -13518,13 +13795,6 @@ author = {John C. Duchi},
 title = {A Few Observations on Sample-Conditional Coverage in Conformal Prediction},
 year = 2025,
 journal = {arXiv:2503.00220 [math.ST]},
-}
-
-@article{Duchi25m,
-author = {John C. Duchi},
-title = {Distribution free {M}-estimation},
-year = 2025,
-journal = {arXiv:2505.22807 [math.ST]},
 }
 
 @misc{Duchi23,
@@ -14998,6 +15268,13 @@ publisher = {Cambridge University Press},
 series = {Insitute of Mathematical Statistics Monographs},
 }
 
+@book{Efron22,
+author = {Bradley Efron},
+title = {Exponential Families in Theory and Practice},
+publisher = {Cambridge University Press},
+year = 2022,
+}
+
 @inproceedings{EhrenfeuchtHa88,
 author=   	{Ehrenfeucht, Andrzej and David Haussler},
 title=    	{Learning Decision Trees from Random Examples},
@@ -16076,6 +16353,27 @@ issue = {594--604},
 pages = {309--368},
 }
 
+@article{FisherCoWi43,
+author = {Ronald A. Fisher and A. Steven Corbett and Carrington Bonsor Williams},
+title = {The relation between the number of species and the number
+of individuals in a random sample of an animal population},
+journal = {Journal of the British Ecological Society},
+year = 1943,
+volume = 12,
+number = 1,
+pages = {42--58},
+}
+
+@article{FisslerZi16,
+author = {Tobias Fissler and Johanna Ziegel},
+title = {Higher order elicitability and {O}sband’s principle},
+journal = aos,
+volume = 44,
+number = 4,
+year = 2016,
+pages = {1680--1707},
+}
+
 @article{FlajoletGaTh92,
   title={Birthday paradox, coupon collectors, caching algorithms and self-organizing search},
   author={Flajolet, Philippe and Gardy, Daniele and Thimonier, Lo{\"y}s},
@@ -16302,12 +16600,16 @@ number = 12,
 year = 2021,
 }
 
-@article{FosterHa22,
+@article{FosterHa23,
 author = {Dean P. Foster and Sergiu Hart},
-title = {``Calibeating'': Beating Forecasters at their own Game},
-year = 2022,
-journal = {arXiv:2209.0489 [econ.TH]},
-comment = {\url{https://arxiv.org/abs/2209.04892}}
+title = {``{C}alibeating'': Beating Forecasters at their own Game},
+year = 2023,
+journal = {Theoretical Economics},
+volume = 18,
+number = 4,
+pages = {1441--1474},
+doi = {10.3982/TE5330},
+comment = {arXiv:2209.0489 [econ.TH], \url{https://arxiv.org/abs/2209.04892}}
 }
 
 @article{FosterKaQiRa21,
@@ -16868,6 +17170,16 @@ pages =            {302--332}
  publisher = {ACM},
  }
 
+@article{FriedmanSa48,
+author = {Milton Friedman and Leonard Savage},
+title = {The Utility Analysis of Choices Involving Risk},
+journal = {Journal of Political Economy},
+volume = 56,
+number = 4,
+pages = {279--304},
+year = 1948,
+}
+
 @inproceedings{FriessCrCa98
 ,author=         {T.~Friess and N.~Cristianini and C.~Campbell}
 ,title=          {The Kernel-Adatron: A Fast and Simple Learning
@@ -16894,6 +17206,21 @@ pages =            {302--332}
   pages=150,
   year=2018,
   publisher={BioMed Central}
+}
+
+@inproceedings{FrongilloWa21,
+author = {Rafael Frongillo and Bo Waggoner},
+title = {Surrogate Regret Bounds for Polyhedral Losses},
+year = 2021,
+booktitle = nips2021,
+}
+
+@inproceedings{FrongilloKa15,
+author = {Rafael Frongillo and Ian A. Kash},
+title = {Vector-Valued Property Elicitation},
+booktitle = colt15,
+year = 2015,
+pages = {710--727},
 }
 
 @book{FrontiersMassiveDataAnalysis,
@@ -17178,6 +17505,16 @@ comment = {Gives a nice argument for the equality of (Bayesian) max-min and
   pages =	 {849-852},
   year =	 1986,
   organization = {IEEE}
+}
+
+@article{GamarnikZa22,
+author = {David Gamarnik and Ilias Zadik},
+title = {Sparse high-dimensional linear regression. Estimating squared error and a phase transition},
+year = 2022,
+journal = aos,
+volume = 50,
+number = 2,
+pages = {880--903},
 }
 
 @inproceedings{GamsLa87,
@@ -18025,6 +18362,15 @@ pages = {24--44},
   publisher={Addison-Wesley}
 }
 
+@article{Gneiting11,
+author = {Tilmann Gneiting},
+title = {Making and evaluating point forecasts},
+journal = jasa,
+volume = 106,
+number = 494,
+pages = {746--762},
+}
+
 @article{GneitingBaRa07,
   title={Probabilistic forecasts, calibration and sharpness},
   author={Gneiting, Tilmann and Balabdaoui, Fadoua and Raftery, Adrian E},
@@ -18033,6 +18379,15 @@ pages = {24--44},
   number={2},
   pages={243--268},
   year={2007},
+}
+
+@article{GneitingKa14,
+author = {Tilmann Gneiting and Matthias Katzfuss},
+title = {Probabilistic Forecasting},
+year = 2014,
+journal = {Annual Review of Statistics and its Application},
+volume = 1,
+pags = {125--151},
 }
 
 @article{GneitingRa07,
@@ -18417,13 +18772,15 @@ pages = {2672--2680},
 	}
 
 
-@article{GopalanKaReShWi21,
+@inproceedings{GopalanKaReShWi22,
 author = {Parikshit Gopalan and Adam Tauman Kalai and Omer Reingold
   and Vatsal Sharan and Udi Wieder},
 title = {Omnipredictors},
-year = 2021,
-journal = {arXiv:2109.05389 [cs.LG]},
-comment = { Develops what they call ``omnipredictors,'' which is related
+year = 2022,
+year = itcs2022,
+doi = {10.4230/LIPIcs.ITCS.2022.79},
+comment = {arXiv:2109.05389 [cs.LG].
+  Develops what they call ``omnipredictors,'' which is related
   to multicalibration (see \cite{HebertKiReRo18}). A function $f$ is an
   omni-predictor if for a collection of losses $\mc{L}$ and
   decision rules $c$, one has
@@ -18663,6 +19020,14 @@ year = 1990,
 publisher = {Springer},
 comment = {Basically deals with measure-theoretic versions of information
 theory, which is nice},
+}
+
+@book{Gray11,
+author = {Robert M. Gray},
+title = {Entropy and Information Theory},
+year = 2009,
+publisher = {Springer},
+edition = {Second},
 }
 
 @article{Gray06,
@@ -19081,6 +19446,17 @@ pages = {379–-411},
     booktitle=icml17
 }
 
+@article{GuoShVe05,
+title = {Mutual information and minimum mean-square error in
+  {G}aussian channels},
+author = {Dongning Guo and Shlomo Shamai and Sergio Verdu},
+year = 2005,
+journal = ieeeit,
+volume = 51,
+number = 4,
+pages = {1261--1282},
+}
+
 @book{Gupal79,
 author = {A. M. Gupal},
 title = {Stokhasticheskie Methody Resheniya Negladkikh Ekstremal'nykh Zadach
@@ -19139,6 +19515,13 @@ journal = {IEEE Transactions on Information Theory},
 volume = 46,
 number = 2,
 pages = {388--404},
+}
+
+@inproceedings{GuptaRa22,
+title = {Top-label calibration and multiclass-to-binary reductions},
+author = {Chirag Gupta and Aaditya Ramdas},
+year = 2022,
+booktitle = iclr22,
 }
 
 @article{GuptaRo21,
@@ -21221,6 +21604,16 @@ publisher=	{Plenum Press},
 comment=	{address = New York}
 }
 
+@article{Holm79,
+author = {Sture Holm},
+title = {A simple sequentially rejective multiple test procedure},
+year = 1979,
+journal = {Scandinavian Journal of Statistics},
+number = 2,
+volume = 6,
+pages = {65--70},
+}
+
 @article{Holmstedt70,
 title = {Interpolation of quasi-normed spaces},
 author = {T.~Holmstedt},
@@ -21772,6 +22165,25 @@ year = 1998,
 booktitle = stoc98,
 }
 
+@article{Ingster97,
+title = {Some problems of hypothesis testing leading to infinitely
+  divisible distributions},
+author = {Yuri Ingster},
+journal = {Mathematical Methods of Statistics},
+volume = 6,
+number = 1,
+pages = {47--69},
+}
+
+@book{IngsterSu03,
+title = {Nonparametric Goodness-of-Fit Testing Under Gaussian Models},
+author = {Yuri Ingster and Irina Suslina},
+year = 2003,
+publisher = {Springer},
+series = {Lecture Notes in Statistics},
+number = 169,
+}
+
 @article{Ioannidis05,
 author = {John P. Ioannidis},
 journal = {PLoS Medicine},
@@ -22034,6 +22446,15 @@ booktitle = stoc13,
   year={1954},
 }
 
+@inproceedings{JamesSt61,
+author = {Willard Stein and Charles Stein},
+title = {Estimation with quadratic loss},
+year = 1961,
+booktitle = {Proceedings of the Fourth Berkeley Symposium on
+Mathematical Statistics and Probability},
+pages = {361--379},
+}
+
 @article{JamesHa98,
 author=		{G. James and T. Hastie},
 title=		{The error coding method and {PiCT}},
@@ -22150,6 +22571,16 @@ pages = {422--446},
   pages=2690,
   year=1997,
   publisher={APS}
+}
+
+@article{JavanmardMo18,
+title = {Adel Javanmard and Andrea Montanari},
+year = 2018,
+title = {Online rules for control of false discovery rate and false discovery exceedance},
+journal = aos,
+volume = 46,
+number = 2,
+pages = {526--554},
 }
 
 @article{Jaynes68,
@@ -22950,7 +23381,7 @@ comment = {Brutal book on everything in probability.},
 @book{Kallenberg17,
 author = {Olav Kallenberg},
 year = 2017,
-booktitle = {Random Measures, Theory and Applications},
+title = {Random Measures, Theory and Applications},
 publisher = {Springer},
 }
 
@@ -23452,11 +23883,13 @@ Near-Optimal Generalization}
 ,pages=		{273--282}
 }
 
-@article{KearnsNeRoWu18,
+@inproceedings{KearnsNeRoWu18,
   author = {Michael Kearns and Seth Neel and Aaron Roth and Zhiwei S. Wu},
-  journal = {arXiv:1711.05144 [cs.LG]},
   title = {Preventing Fairness Gerrymandering: Auditing and Learning for Subgroup Fairness},
+  booktitle = icml18,
   year = {2018},
+  pages = {2564--2572},
+comment = {  journal = {arXiv:1711.05144 [cs.LG]},},
 }
 
 @inproceedings{KearnsNeRoWu19,
@@ -25355,6 +25788,15 @@ journal = {Scientific American},
 note = {URL \url{https://blogs.scientificamerican.com/observations/five-sigmawhats-that/}},
 }
 
+@inproceedings{LambertPeSh08,
+author = {Nicholas Lambert and David Pennock and Yoav Shoham},
+title = {Eliciting properties of probability distributions},
+year = 2008,
+booktitle = {Proceedings of the Ninth Annual ACM Conference on
+                  Electronic Commerce (EC)},
+pages = {129--138},
+}
+
 @inproceedings{LambrouPa16,
 author="Lambrou, Antonis
 and Papadopoulos, Harris",
@@ -25481,9 +25923,17 @@ pages=		{45--52}
 ,pages = "331--339"
 }
 
+@book{Lang02,
+author = {Serge Lang},
+title = {Algebra},
+year = 2002,
+edition = {revised third},
+publisher = {Springer},
+}
+
 @inproceedings{LangfordCa01,
 author = {John Langford and Richard Caruana},
-title = {(Not) bounding the true error},
+title = {({N}ot) bounding the true error},
 booktitle = nips2001,
 year = 2001,
 }
@@ -25628,6 +26078,7 @@ booktitle = aistat17,
 author = {Lucien {Le Cam}},
 title = {On some asymptotic properties of maximum likelihood estimates
 and related {Bayes} estimates},
+year = 1953,
 journal = {University of California Publications in Statistics},
 volume = {3},
 pages = {37--98}
@@ -25789,7 +26240,7 @@ howpublished = {\url{https://github.com/taehoonlee/tensornets}}
   author    = {Yin Tat Lee and
                He Sun},
   title     = {An SDP-based algorithm for linear-sized spectral sparsification},
-  booktitle = {stoc2017},
+  booktitle = stoc17,
   year      = {2017},
 }
 
@@ -26635,7 +27086,7 @@ doi = {10.1126/science.ade2574},
 
 @article{Lin91,
 author = {Jianhua Lin},
-title = {Divergence Measures Based on the Shannon Entropy},
+title = {Divergence Measures Based on the {S}hannon Entropy},
 year = 1991,
 journal = ieeeit,
 volume = 37,
@@ -27123,6 +27574,14 @@ year=		1989
 ,pages=		{212--261}
 }
 
+@book{Littlewood44,
+author = {John E. Littlewood},
+title = {Lectures on the Theory of Functions},
+year = 1944,
+publisher = {Oxford University Press},
+}
+
+
 @inproceedings{Liu07,
 	title={Fisher consistency of multicategory support vector machines},
 	author={Liu, Yufeng},
@@ -27373,6 +27832,32 @@ year={1990},
 volume={36},
 number={2},
 pages={241--255},
+}
+
+@inproceedings{LongSe13,
+author = {Philip M. Long and Rocco A. Servedio},
+title = {Consistency versus Realizable ${H}$-Consistency
+for Multiclass Classification},
+year = 2013,
+booktitle = icml13,
+comment = {
+  Considers surrogate risk consistency for restricted classes of hypotheses
+  $\mc{H}$ (but does not provide a general theory).
+  Shows a funny counter-example that for realizable problems, meaning
+  that there exists $h \in \mc{H}$ with $\argmax_y h_y(x) = y(x)$, where
+  $P(Y = y(x) \mid x) = 1$, that the Crammer-Singer max margin loss
+  $\ell(h(x), y) = \max_{j \neq y} (1 + h_j(x) - h_y(x))_+$ attains
+  consistency, while a reasonable family of smooth losses that are Bayes
+  risk consistent fail to be consistent.
+  %
+  Specifically, the family of losses of the form
+  $\ell(h(x), y) = -h_y(x) + \sum_{j \neq y} \phi(-h_j(x))$, where $\phi$
+  is a convex function with $\phi'(0) < 0$ but which eventually
+  increases. (For example, $\phi(t) = (t - 1)^2$.) These are Bayes consistent
+  but not consistent for restricted hypothesis classes.
+  %
+  Realizability is key here, but a good thought experiment.
+},
 }
 
 @InProceedings{LongWu04,
@@ -27672,6 +28157,14 @@ url = {http://arxiv.org/abs/1003.1266},
 	year={2020}
 }
 
+@inproceedings{LyuTa25,
+author = {Xin Lyu and Kunal Talwar},
+booktitle = stoc25,
+year = 2025,
+title = {Fingerprinting Codes Meet Geometry: Improved Lower Bounds for Private Query Release and Adaptive Data Analysis},
+pages = {2374--2385},
+}
+
 @inproceedings{MaassTu89,
 author = 	{Wolfgang Maass and Gyorfy Turan},
 title = 	{On the complexity of Learning From Counterexamples},
@@ -27688,7 +28181,6 @@ title = {The Power of Interpolation: Understanding the Effectiveness of {SGD}
   in Modern Over-parametrized Learning},
 booktitle = icml18,
 }
-
 
 @article{Mahoney11,
 author = {Michael Mahoney},
@@ -27710,6 +28202,24 @@ url = {http://arxiv.org/abs/1104.5557},
   year={2015}
 }
 
+@inproceedings{MaoMoZh23,
+author = {Anqi Mao and Mehyrar Mohri and Yutao Zhong},
+year = 2023,
+title = {Cross-entropy loss functions: theoretical analysis and applications},
+booktitle = icml23,
+}
+
+@article{MathesonWi76,
+title = {Scoring Rules for Continuous Probability Distributions},
+author = {James E. Matheson and Robert L. Winkler},
+year = 1976,
+journal = {Management Science},
+volume = 22,
+number = 10,
+pages = {1087--1096},
+}
+
+
 @article{MaWu15,
 author = {Zongming Ma and Yihong Wu},
 title = {Computational barriers in minimax submatrix detection},
@@ -27727,6 +28237,18 @@ title = {Volume Ratio, Sparsity, and Minimaxity
 year = 2013,
 journal = {arXiv:1306.3609 [math.ST]},
 url = {http://arxiv.org/abs/1306.3609},
+}
+
+@article{MackeyJoChFaTr14,
+author = {Lester W. Mackey and Michael I. Jordan and Richard Y. Chen and
+Brendan Farrell and Joel A. Tropp},
+title = {Matrix concentration inequalities via the method of
+exchangeable pairs},
+year = 2014,
+journal = aop,
+number = 42,
+number = 3,
+pages = {906--945},
 }
 
 @article{MackeyJoChFaTr12,
@@ -28173,6 +28695,16 @@ year =		1997
   year=2011
 }
 
+@article{Margulis74,
+title = {Probabilistic characteristics of graphs with large connectivity},
+year = 1974,
+author = {Grigory Aleksandrovich Margulis},
+journal = {Problems of Information Transmission},
+number = 2,
+volume = 10,
+pages = {101--108},
+}
+
 @article{Marimon93
 ,author=	{Ramon Marimon}
 ,title=		{Adaptive learning, evolutionary dynamics and
@@ -28294,8 +28826,19 @@ comment = {Characterizes solutions to quadratic (indefinite) trust region
  like problems, among others.},
 }
 
+@article{Marton96,
+author = {Katalin Marton},
+year = 1996,
+journal = aop,
+title = {Bounding $\overline{d}$-distance
+  by informational divergence: a method to prove measure concentration},
+volume = 24,
+number = 2,
+pages = {857--866},
+}
+
 @article{Marton98,
-author = {K. Marton},
+author = {Katalin Marton},
 title = {Measure concentration for a class of random processes},
 year = 1998,
 journal = {Probability Theory and Related Fields},
@@ -29388,6 +29931,15 @@ year=		1986,
 comment=	{address= Boston/Dordrecht/Lancaster}
 }
 
+@article{Mitjagin61,
+author = {Boris Samuel Mityagin},
+year = 1961,
+title = {Approximate dimension and bases in nuclear spaces},
+journal = {Russian Mathematical Surveys},
+pages = {59--127},
+volume = 16,
+}
+
 @book{MitzenmacherUp05,
 	title={Probability and computing: Randomized algorithms and probabilistic
 	analysis},
@@ -29527,6 +30079,17 @@ comment = {Discusses geometric ergodicity of linear ARMA models. A little
 	author={Andrea Montanari and Feng Ruan and Youngtak Sohn and Jun Yan},
 	journal={arXiv:1911.01544 [math.ST]},
 	year=2019
+}
+
+@article{MontanariVe21,
+author = {Andrea Montanari and Ramji Venkataramanan},
+title = {Estimation of low-rank matrices via approximate
+message passing},
+year = 2021,
+journal = aos,
+volume = 49,
+number = 1,
+pages = {321--345},
 }
 
 @inproceedings{MontasserHaSr19,
@@ -29780,6 +30343,16 @@ booktitle = {Proceedings of the IEEE International Symposium on
 	booktitle=aistat19,
 	pages={3051--3059},
 	year={2019},
+}
+
+@article{Nadaraya64,
+title = {On Estimating Regression},
+author = {\`{E}lizbar Nadaraya},
+year = 1964,
+journal = {Theory of Probability and Its Applications},
+volume = 9,
+number = 1,
+pages = {141--142},
 }
 
 @article{NagaevCh11,
@@ -30683,6 +31256,14 @@ comment = {Describes algorithms that take advantage of local smoothness
   of the dataset is a neat idea, though.},
 }
 
+@inproceedings{NissimSmStStUl18,
+author = {Kobbi Nissim and Adam Smith and Thomas Steinke and Uri Stemmer
+  and Jonathan Ullman},
+booktitle = nips2018,
+year = 2018,
+title = {The Limits of Post-Selection Generalization},
+}
+
 @inproceedings{NiuReReWr11,
 author = {Feng Niu and Benjamin Recht and Christopher Re and Stephen Wright},
 title = {Hogwild: a lock-free approach to parallelizing stochastic gradient
@@ -30696,6 +31277,13 @@ booktitle = nips2011,
   title = 	 {Combining hidden Markov model and neural network classifiers},
   booktitle = {ICASSP},
   year = 	 {1990}
+}
+
+@inproceedings{NilesWeedZa21,
+author = {Jonathan Niles-Weed and Ilias Zadik},
+year = 2021,
+title = {It was `all' for `nothing': sharp phase transitions for noiseless discrete channels},
+booktitle = colt21,
 }
 
 @book{Nilsson65,
@@ -31008,6 +31596,16 @@ booktitle = nips2016,
   publisher={Elsevier}
 }
 
+@article{OrdentlichWe05,
+title = {A distribution dependent refinement of {P}insker's inequality},
+author = {Erik Ordentlich and Marcelo Weinberger},
+journal = ieeeit,
+year = 2005,
+volume = 51,
+number = 5,
+pages = {1836--1840},
+}
+
 @inproceedings{OrecchiaScVaVa08,
   author    = {Lorenzo Orecchia and
                Leonard J. Schulman and
@@ -31059,6 +31657,14 @@ booktitle = nips2015,
 	pages={1--13},
 	year={2012},
 	publisher={Institute of Mathematical Statistics and Bernoulli Society}
+}
+
+@phdthesis{Osband85,
+author = {Kent Osband},
+title = {Providing incentives for better cost forecasting},
+year = 1985,
+school = {University of California, Berkeley},
+url = {https://doi.org/10.5281/zenodo.4355667},
 }
 
 @article{OshersonStWe84,
@@ -31361,6 +31967,37 @@ comment=  	{Integration of probabilities into B* algorithm (Ph.D. thesis
   title = 	 {Concept Boundary Detection for Speeding up {SVM}s},
   booktitle = 	 icml06,
   year = 2006,
+}
+
+@article{Paninski03,
+title = {Estimation of entropy and mutual information},
+author = {Liam Paninski},
+year = 2003,
+journal = {Neural Computation},
+volume = 15,
+number = 6,
+pages = {1191--1253},
+}
+
+@article{Paninski04,
+title = {Estimating entropy on $m$ bins given fewer than $m$ samples},
+author = {Liam Paninski},
+year = 2004,
+journal = ieeeit,
+volume = 50,
+number = 9,
+pages = {2200--2203},
+}
+
+@article{Paninski08,
+title = {A Coincidence-Based Test for Uniformity Given Very
+Sparsely Sampled Discrete Data},
+author = {Liam Paninski},
+year = 2008,
+journal = ieeeit,
+volume = 54,
+number = 10,
+pages = {4750--4755},
 }
 
 @article{PanYa09,
@@ -32536,6 +33173,13 @@ comment=  	{Show that determining whether a network stabilizes is
 		rules.}
 }
 
+@article{PortellaHa24,
+author = {Victor S. Portella and Nick Harvey},
+title = {Lower Bounds for Private Estimation of {G}aussian Covariance Matrices under All Reasonable Parameter Regimes},
+year = 2024,
+journal = {arXiv:2404.17714 [cs.DS]},
+}
+
 @article{Portnoy88,
   title={Asymptotic behavior of likelihood methods for exponential families when the number of parameters tends to infinity},
   author={Portnoy, Stephen},
@@ -32905,7 +33549,7 @@ booktitle = {Proceedings of the IEEE International Symposium
    on Informaiton Theory},
 }
 
-@article{RaginskySa12,
+@article{RaginskySa14,
 author = {Maxim Raginsky and Igor Sason},
 title = {Concentration of measure inequalities in information theory, communications, and coding},
 year = 2014,
@@ -33037,11 +33681,14 @@ pages = {15149–-15154},
   publisher={Institute of Mathematical Statistics}
 }
 
-@article{RamdasGrVoSa22,  
+@article{RamdasGrVoSh23,
   title={Game-Theoretic Statistics and Safe Anytime-Valid Inference},  
   author={Aaditya Ramdas and Peter Gr\"{u}nwald and Vladimir Vovk and Glenn Shafer},  
-  year=2022,  
-  journal={arXiv:2210.01948 [math.ST]},  
+  year=2023, 
+  journal=statsci,
+  volume = 38,
+  number = 4,
+  pages = {576--601},
 }
 
 @inproceedings{RamdasSi13,
@@ -33059,6 +33706,16 @@ title = {On the decreasing power of kernel and distance-based nonparametric
 hypothesis tests in high dimensions},
 year = 2015,
 booktitle = aaai15,
+}
+
+@article{RamdasWa25,
+title = {Hypothesis Testing with E-values},
+author = {Aaditya Ramdas and Ruodu Wang},
+year = 2025,
+journal = {Foundations and Trends in Statistics},
+volume = 1,
+number = {1--2},
+pages = {1--390},
 }
 
 @article{RamNeVe09a,
@@ -33089,6 +33746,16 @@ journal = jota,
 volume = 147,
 number = 3,
 year = 2010,
+}
+
+@article{Rao45,
+title = {Information and the Accuracy Attainable in the Estimation of Statistical Parameters},
+year = 1945,
+author = {Calyampudi R. Rao},
+journal = {Bulletin of the Calcutta Mathematical Society},
+volume = 37,
+number = 3,
+pages = {81--91},
 }
 
 @unknown{RaoTi97
@@ -35164,6 +35831,23 @@ comment = {Shows (among other results) that if a function
 ,title=		{Learning in Boltzman Trees}
 }
 
+@book{Savage54,
+author = {Leonard J. Savage},
+title = {The Foundations of Statistics},
+year = 1954,
+publisher = {John Wiley \& Sons},
+}
+
+@article{Savage71,
+author = {Leonard J. Savage},
+year = 1971,
+title = {Elicitation of Personal Probabilities and Expectations},
+journal = jasa,
+volume = 66,
+number = 336,
+pages = {783--801},
+}
+
 @book{Sayed03,
   title={Fundamentals of Adaptive Filtering},
   author={Sayed, Ali H},
@@ -35731,6 +36415,17 @@ pages={647-653},
   year =	 1997
 }
 
+@article{SchrammWe22,
+author = {Tselil Schramm and Alexander Wein},
+title  = {Computational barriers to estimation from low-degree
+polynomials},
+year =2022,
+journal = aos,
+volume = 50,
+number = 3,
+pages = {1833--1858},
+}
+
 @article{Schraudolph02,
 	title={Fast curvature matrix-vector products for second-order gradient
 	descent},
@@ -35903,6 +36598,13 @@ comment= 	{Shows how to pac learn kDNF with random attribute noise of
   volume={9},
   number={3},
   year={2008}
+}
+
+@book{ShaferVo19,
+title = {Game-Theoretic Foundations for Probability and Finance},
+author = {Glenn Shafer and Vladimir Vovk},
+year = 2019,
+publisher = {Wiley},
 }
 
 @article{ShahBaGuWa17,
@@ -36339,15 +37041,15 @@ journal = {arXiv:1906.02168 [cs.LG]},
 	author = "A. Shashua and A. Levin",
 	title = "Ranking with Large Margin Principle: Two Approaches",
 	booktitle = nips2002,
-	year = 2002
+	year = 2002,
 }
 
 
-@Article{Shannon48,
+@article{Shannon48,
   author = 	 {C. E. Shannon},
   title = 	 {A Mathematical Theory of Communication},
   journal = 	 {The Bell System Technical Journal},
-  year = 	 1948
+  year = 	 1948,
 }
 
 
@@ -37604,6 +38306,15 @@ volume = 7,
 number = 2,
 }
 
+@inproceedings{SteinkeUl15a,
+author = {Thomas Steinke and Jonathan Ullman},
+year = 2015,
+title = {Interactive fingerprinting codes and the hardness of
+  preventing false discovery},
+booktitle = colt15,
+pages = {1588--1628},
+}
+
 @inproceedings{SteinkeUl15,
 author = {Thomas Steinke and Jonathan Ullman},
 title = {Between Pure and Approximate Differential Privacy},
@@ -37720,6 +38431,16 @@ year = 2018,
 booktitle = nips2018,
 comment = {Assumes strong convexity and Lipschitzness, and uses both a lot,
   making all the results in the paper vacuous. May be fixable, unclear.},
+}
+
+@article{Stigler90,
+author = {Stephen M. Stigler},
+title = {A {G}altonian Perspective on Shrinkage Estimators},
+year = 1990,
+journal = statsci,
+volume = 5,
+number = 1,
+pages = {147--155},
 }
 
 @article{Stockmeyer85,
@@ -38239,6 +38960,14 @@ journal = siopt,
 pages = {476--505},
 volume = 8,
 number = 2,
+}
+
+@misc{Tao10_gt,
+author = {Terence Tao},
+title = {The Golden-Thompson inequality},
+year = 2010,
+hopublished = {\url{https://terrytao.wordpress.com/2010/07/15/the-golden-thompson-inequality/}},
+note = {Accessed: 2025-09-01},
 }
 
 @book{Tao10,
@@ -38994,6 +39723,15 @@ volume = 51,
 pages = {1030--1051},
 }
 
+@book{Tropp18,
+author = {Joel A. Tropp},
+title = {Lectures on Convex Geometry},
+year = 2018,
+series = {Caltech CMS Lecture Notes},
+volume = {2019-02 (ACM 204)},
+publisher = {California Institute of Technology},
+}
+
 @article{Tropp12,
 author = {Joel A. Tropp},
 title = {User-friendly tail bounds for sums of random matrices},
@@ -39492,6 +40230,17 @@ comment={isbn = {0-521-49603-9}},
   comment =	 {This book is recommended by Dudley as a reference for the analysis of BootStrap}
 }
 
+@article{VanDerVaartWe21,
+author = {Aad W. van der Vaart and Jon A. Wellner},
+year = 2021,
+title = {Stein 1956: {E}fficient nonparametric testing and estimation},
+journal = aos,
+volume = 49,
+number = 4,
+pages = {1836--1849},
+note = {Memorial issue for Charles Stein},
+}
+
 @article{VanDerVaart02,
   title={The statistical work of Lucien Le Cam},
   author={Aad W. van der Vaart},
@@ -39554,6 +40303,13 @@ comment = {Considers the problem of looking for robust solutions
   solution to this problem. Some extensions, and appears to work
   even in continuous state spaces. Unclear to me currently but also
   appears to give uniform control over $x$?},
+}
+
+@book{VanTrees68,
+title = {Detection, Estimation, and Modulation Theory, Part I},
+author = {Harry {Van Trees}},
+year = 1968,
+publisher = {John Wiley and Sons},
 }
 
 @book{Vapnik82,
@@ -39924,6 +40680,17 @@ year = {2001},
 pages = {213--248}
 }
 
+@article{Vovk09,
+author = {Vladimir Vovk},
+title = {Superefficiency from the Vantage Point
+of Computability},
+year = 2009,
+journal = statsci,
+volume = 24,
+number = 1,
+pages = {73--86},
+}
+
 @inproceedings{VovkGaSa99,
 author = {Volodya Vovk and Alex Grammerman and Craig Saunders},
 title = {Machine-learning applications of algorithmic randomness},
@@ -40005,6 +40772,15 @@ author = {Stefan Wager and Kuang Xu},
 year = 2021,
 journal = {arXiv:2101.09855 [math.ST]},
 title = {Diffusion asymptotics for sequential experiments},
+}
+
+@article{WaghmareZi25,
+author = {Kartik Waghmare and Johanna Ziegel},
+title = {Proper Scoring Rules for estimation and forecast evaluation},
+year = 2025,
+journal = {Annual Review of Statistics and its Application},
+volume = {to appear},
+url = {https://arxiv.org/abs/2504.01781},
 }
 
 @techreport{WahBrWePeBe11,
@@ -40529,6 +41305,16 @@ year=		1989
 ,pages=		{279--292}
 }
 
+@article{Watson64,
+author = {Geoffrey S. Watson},
+title = {Smooth Regression Analysis},
+year = 1964,
+journal = {Sankhy\={a}: The Indian Journal of Statistics, Series A},
+pages = {359--372},
+volume = 26,
+number = 4,
+}
+
 @inproceedings{WelinderBrPeBe10,
   title={The multidimensional wisdom of crowds},
   author={Peter Welinder  and Steve Branson and Pietro Perona  and Serge Belongie},
@@ -40904,7 +41690,9 @@ author = {Robert C. Williamson and Elodie Vernet and Mark D. Reid},
 title = {Composite Multiclass Losses},
 year = 2016,
 journal = jmlr,
-volume = {to appear},
+volume = 17,
+pages = {1--52},
+number = 222,
 }
 
 @inproceedings{Wilson85,
