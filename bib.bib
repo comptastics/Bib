@@ -587,6 +587,13 @@ Learning Representations}}
 @string{siopt = {SIAM Journal on Optimization}}
 @string{jota = {Journal of Optimization Theory and Applications}}
 
+@inproceedings{AbadiBuErLi09,
+author = {Martin Abadi and Mihai Budiu and Ulfar Erlingsson and Jay Ligatti},
+year = 2009,
+title = {Control-flowintegrityprinciples, implementations, and applications},
+booktitle = {ACM Transactions on Information and System Security},
+}
+
 @inproceedings{AbadiChGoMcMiTaZh16,
 title = {Deep Learning with Differential Privacy},
 author  = {Martin Abadi and Andy Chu and Ian Goodfellow and Brendan McMahan and Ilya Mironov and Kunal Talwar and Li Zhang},
@@ -606,7 +613,6 @@ booktitle = {30th IEEE Computer Security Foundations Symposium (CSF)},
 pages = {1--6},
 publisher = {IEEE},
 }
-
 
 @inproceedings{Abbasi-YadkoriPaSz11,
   title={Improved algorithms for linear stochastic bandits},
@@ -12202,6 +12208,22 @@ comment = {Proves a Rosenthal-type inequality for vectors in a Banach
   a (essentially) sub-exponential-type term.}
 }
 
+@article{DebenedettiShFaHaCaFaKeShTeTr25,
+author = {Edoardo Debenedetti and  Ilia Shumailov and Tianqi Fan and
+  Jamie Hayes and Nicholas Carlini and
+  Daniel Fabian and Christoph Kern and Chongyang Shi and Andreas Terzis and Florian Tram\`{e}r},
+title = {Defeating Prompt Injections by Design},
+year = 2025,
+journal = {arXiv:2503.18813 [cs.CR]},
+comment = {Describes a system for providing protections of LLM agents
+  by having a 'quarantined' llm that can read data and parse it, but
+  no tool use, and a 'privileged' llm that can make plans to use tools,
+  but doesn't inspect data.
+  %
+  Requires an over-arching plan inspector that certifies safe tool use
+  and data and control flows.},
+}
+
 @inproceedings{deCamposBaVa09,
   author    = {de Campos, T. E. and Babu, B. R. and Varma, M.},
   title     = {Character recognition in natural images},
@@ -23521,6 +23543,55 @@ number = 3,
 pages = {291--307},
 }
 
+@article{KalaiNaVeZh25,
+author = {Adam Tauman Kalai and Ofir Nachum and Santosh Vempala and Edwin Zhang},
+title = {Why Language Models Hallucinate},
+year = 2025,
+journal = {arXiv:2509.04664 [cs.CL]},
+}
+
+@article{KalaiNaVeZh26,
+author = {Adam Tauman Kalai and Ofir Nachum and Santosh Vempala and Edwin Zhang},
+title = {Evaluating large language models for accuracy incentivizes
+hallucinations},
+year = 2026,
+journal = {Nature},
+volume = {to appear},
+comment = {Originally arXiv:2509.04664 [cs.CL].
+% 
+Considers generative scenarios and shows that a language model
+  that does poorly on what they term an ``is it valid'' task necessarily
+  has high errors.
+  %
+  In particular, they provide a bound of the form
+  $p_{\textup{err}} \ge \textup{err}_{\textup{iiv}} - |V| / |E| - \delta$,
+  where $V$ is the set of valid responses, $E$ is the set of potential
+  error responses, and $\textup{err}_{\textup{iiv}}$ is error
+  on an ``is it valid'' task and $\delta$ is a type of calibration error.
+  %
+  The is-it-valid error is the probability of error
+  of the classifier $\hat{f}(x) = 1$ if $\hat{p}(x) > 1/|E|$ and
+  $\hat{f}(x) = 0$ otherwise under the $X$-distribution sampling
+  examples with probability $\half$ from the valid distribution and
+  $\half$ uniformly from the set of errors $E$.
+  %
+  The $\delta = |\hat{P}(A) - P(A)|$, where $A = \{x \mid \hat{p}(x) > 1/|E|\}$
+  is the set of examples that the algorithm might ``answer'' (because
+  they have higher probability than the uniform errors): it measures
+  the difference between the empirical probability assigned
+  and the true probability for those answers more likely than the errors.
+  %
+  (So $\hat{P}(A) = \sum_x \hat{p}(x) \indic{\hat{p}(x) > 1/|E|}$ is the
+  empirical probability of all answers on the set $\hat{p}(x) > 1/|E|$,
+  while $P(A)$ is the true probability,
+  which is only positive on valid examples.
+  %
+  Ideally calibration would mean that conditional on outputting a particular
+  probability value of an emissions $x$, the true probability would be
+  equal to $\hat{p}(x)$.)
+  },
+}
+
 @inproceedings{KalkanliOz20,
 author = {Cem Kalkanli and Ayfer \"{O}zg\"{u}r},
 year = 2020,
@@ -30191,6 +30262,13 @@ comment = {Basically uses subsample and aggregate to build a
 },
 }
 
+@inproceedings{MohriHa24,
+title = {Language Models with Conformal Factuality Guarantees},
+author = {Christopher Mohri and Tatsunori Hashimoto},
+year = 2024,
+booktitle = icml24,
+}
+
 @article{MohriRo10,
 author = {Mehryar Mohri and Afshin Rostamizadeh},
 title = {Stability bounds for stationary $\phi$-mixing and
@@ -32290,6 +32368,17 @@ title = {Catalyst for Gradient-based Nonconvex Optimization},
 year = 2018,
 booktitle = icml18,
 pages = {613--622},
+}
+
+@inproceedings{ParkOBCaMoLiBe23,
+title = {Generative Agents: Interactive Simulacra of Human Behavior},
+author = {Joon Sung Park and Joseph O'Brien and Carrie Jun Cai and
+Meredith Ringel Morris and Percy Liang and Michael S. Berstein},
+year = 2023,
+booktitle = {Proceedings of the 36th Annual ACM Symposium on User Interface
+  Software and Technology},
+number = 2,
+pages = {1--22},
 }
 
 @inproceedings{ParkGeIlLeMa23,
@@ -34771,6 +34860,16 @@ pages = {4--25},
   publisher = 	 {Princeton University Press},
   year = 	 {1970},
   comment = {The early Bible on convex analysis. No pictures.},
+}
+
+@article{Rockafellar70b,
+author = {R. Tyrell Rockafellar},
+title = {On the Maximality of Sums of Nonlinear Monotone Operators},
+year = 1970,
+journal = {Transactions of the American Mathematical Society},
+volume = 149,
+number = 1,
+pages = {75--88},
 }
 
 @article{Rockafellar76,
@@ -43530,6 +43629,13 @@ comment = {A nice proof of concentration of sampled covariance
   the effective rank.},
 }
 
+@article{ZhongRaCa25,
+author = {Ziqian Zhong and Aditi Raghunathan and Nicholas Carlini},
+title = {Impossible{B}ench: Measuring {LLM}s’
+Propensity of Exploiting Test Cases},
+year = 2025,
+journal = {arXiv:2510.2027 [cs.LG]},
+}
 
 @article{Zhou02,
   title={The covering number in learning theory},
